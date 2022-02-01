@@ -2,15 +2,17 @@
 
 let NumberOfFilms = +prompt("Скільки фільмів ти подивився?", 10);
 
-let MovieQuestion = prompt("Один из последних просмотренных фильмов?", '');
-let MovieBall = +prompt("На сколько оцените его?", 1);
-const obj = {
+
+const objDB = {
     count: NumberOfFilms,
-    movies: {MovieQuestion, MovieBall},
+    movies: {},
     actors: {},
     genres: [],
     privat: false
 };
 
+let a = prompt("Один из последних просмотренных фильмов?", '');
+let b = +prompt("На сколько оцените его?", 1);
 
-console.log(obj.movies);
+objDB[a] = b;
+console.log(objDB);
